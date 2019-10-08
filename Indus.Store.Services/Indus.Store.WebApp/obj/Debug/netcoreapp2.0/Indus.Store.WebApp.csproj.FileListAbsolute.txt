@@ -1,0 +1,11 @@
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\bin\Debug\netcoreapp2.0\Indus.Store.WebApp.deps.json
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\bin\Debug\netcoreapp2.0\Indus.Store.WebApp.runtimeconfig.json
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\bin\Debug\netcoreapp2.0\Indus.Store.WebApp.runtimeconfig.dev.json
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\bin\Debug\netcoreapp2.0\Indus.Store.WebApp.dll
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\obj\Debug\netcoreapp2.0\Indus.Store.WebApp.csprojResolveAssemblyReference.cache
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\obj\Debug\netcoreapp2.0\Indus.Store.WebApp.csproj.CoreCompileInputs.cache
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\obj\Debug\netcoreapp2.0\Indus.Store.WebApp.AssemblyInfoInputs.cache
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\obj\Debug\netcoreapp2.0\Indus.Store.WebApp.AssemblyInfo.cs
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\bin\Debug\netcoreapp2.0\Indus.Store.WebApp.pdb
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\obj\Debug\netcoreapp2.0\Indus.Store.WebApp.dll
+D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.WebApp\obj\Debug\netcoreapp2.0\Indus.Store.WebApp.pdb
