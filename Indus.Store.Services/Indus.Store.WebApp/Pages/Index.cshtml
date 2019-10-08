@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="~/css/rly.css" />
     <link rel="stylesheet" href="~/css/w3.css" />
     <link rel="stylesheet" href="~/css/w3-theme-blue-grey.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
     <style>
         html, body, h1, h2, h3, h4, h5 {
             font-family: "Raleway", sans-serif
@@ -58,10 +59,10 @@
                 alert("step2");
 
                 var data = JSON.parse(xhr.responseText);
-                if ( data == null ) {
+                if (data == null) {
                     alert('Some error in object');
                 } else {
-                 
+
                     alert("YES");
                     alert(data[0].product_name);
                 }
@@ -70,7 +71,7 @@
             alert("Test");
             xhr.send();
         }
-       
+
     </script>
 </head>
 <body   class="w3-light-grey">
@@ -115,14 +116,27 @@
             <div class="w3-row-padding" style="margin:0 -16px">
                 <div class="w3-third">
                     <h5>Products</h5>
-                    <table name ="tb_products" class="w3-table w3-striped w3-white">
+                    <table name="tb_products" class="w3-table w3-striped w3-white">
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
-                        
+
                     </table>
+
+                    <div class="product.info">
+                        <img src="Test.jpg">
+                        <h3>Testme</h3>
+                        <ul class="product-props">
+                            <il>
+                                Case 1 </li>
+                                <il>
+                                    Case 2 </li>
+                                    <il> Case 3 </li>
+                        </ul>
+                        <button id="buybutton">Buy</button>
+                    </div>
                 </div>
 
             </div>
