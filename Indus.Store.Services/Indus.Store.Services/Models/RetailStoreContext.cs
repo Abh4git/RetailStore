@@ -16,6 +16,7 @@ namespace Indus.Store.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Ref_Product_Type> Ref_Product_Types { get; set; }
         public DbSet<Ref_Invoice_Status> Ref_Invoice_Statuses { get; set; }
         public DbSet<Ref_Order_Item_Status> Ref_Order_Item_Statuses { get; set; }
         public DbSet<Ref_Payment_Type> Ref_Payment_Types { get; set; }

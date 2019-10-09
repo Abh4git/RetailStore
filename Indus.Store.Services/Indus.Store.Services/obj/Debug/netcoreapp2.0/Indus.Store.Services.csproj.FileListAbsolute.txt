@@ -9,3 +9,14 @@ D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.Ser
 D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.dll
 D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.pdb
 D:\Abhilash\Projects-OpenSource\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.csprojResolveAssemblyReference.cache
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\bin\Debug\netcoreapp2.0\Indus.Store.Services.deps.json
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\bin\Debug\netcoreapp2.0\Indus.Store.Services.runtimeconfig.json
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\bin\Debug\netcoreapp2.0\Indus.Store.Services.runtimeconfig.dev.json
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\bin\Debug\netcoreapp2.0\Indus.Store.Services.dll
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\bin\Debug\netcoreapp2.0\Indus.Store.Services.pdb
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.csprojResolveAssemblyReference.cache
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.csproj.CoreCompileInputs.cache
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.AssemblyInfoInputs.cache
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.AssemblyInfo.cs
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.dll
+D:\Abhilash\GitHub-Abh4git\RetailStore\Indus.Store.Services\Indus.Store.Services\obj\Debug\netcoreapp2.0\Indus.Store.Services.pdb

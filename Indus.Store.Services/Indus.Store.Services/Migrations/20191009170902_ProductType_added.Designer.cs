@@ -4,14 +4,16 @@ using Indus.Store.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Indus.Store.Services.Migrations
 {
     [DbContext(typeof(RetailStoreContext))]
-    partial class RetailStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20191009170902_ProductType_added")]
+    partial class ProductType_added
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -274,6 +276,10 @@ namespace Indus.Store.Services.Migrations
                     b.Property<int>("product_type_code")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("parent_product_type_code");
+
+                    b.Property<int>("product_id");
 
                     b.Property<string>("product_type_description");
 
