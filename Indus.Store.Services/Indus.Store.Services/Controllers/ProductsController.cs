@@ -22,22 +22,13 @@ namespace Indus.Store.Services.Controllers
         }
         // GET api/products
         [HttpGet]
-     
         public IActionResult GetAllProducts()
         {
             var allProducts = _productRepo.GetAll().ToList();
-
-            //var db = new RetailStoreContext();
-            //var product = new Product{product_name="Test", product_price=100.50, product_type_code=1 } ;
-            //db.Products.Add(product);
-            //db.SaveChanges();
             var config = new AutoMapperConfig().Configure();
             var iMapper = config.CreateMapper();
             var allProductsDTO = iMapper.Map<ICollection<Product>, ICollection<ProductDTO>>(allProducts);
             return Ok(allProductsDTO);
-            //var productDTO = iMapper.Map<Product, ProductDTO>(product);
-            //return new string[] { productDTO.product_name, "value2" };
-
         }
 
         // GET api/products/5
