@@ -3,20 +3,39 @@
 *@
 @using Indus.Store.WebApp.Models;
 @{
-    ViewBag.Title = "TEST";
+    ViewBag.Title = "Products Listing";
 }
 
-@foreach (var prod in Model)
-{
-    <div class="product-info">
-        <img src="img/VanGogh.jpg" />
-        <h3>@prod.product_name</h3>
-        <ul class="product-props">
-            <li>Price: $9.99</li>
-            <li>Artist: Van Gogh</li>
-            <li>Title:</li>
-            <li>Description: Self Portrait</li>
-        </ul>
-        <button id="buyButton" class="btn btn-success">Buy</button>
-    </div>
-}
+<head>
+    <link href="@Url.Content("~/css/w3.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/rly.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+
+</head>
+
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="rly.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <span class="w3-bar-item w3-left">Products Listing</span>
+    <span class="w3-bar-item w3-right">Retail Store</span>
+</div>
+<br />
+<br />
+<div class="row">
+    @foreach (var prod in Model)
+    {
+        <div class="col-md-3" >
+
+            <h3>@prod.product_name</h3>
+            <i class="fa fa-book"></i>
+            <ul class="product-props">
+                <li>Price:@prod.product_price</li>
+                <li>Description: @prod.product_description</li>
+            </ul>
+            <button id="buyButton" class="btn btn-success">Buy</button>
+        </div>
+    }
+</div>

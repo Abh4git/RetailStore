@@ -8,6 +8,7 @@ using Indus.Store.DataObjects;
 using AutoMapper;
 using Indus.Store.Services.Repositories;
 using Microsoft.AspNetCore.Cors;
+using Newtonsoft.Json;
 
 namespace Indus.Store.Services.Controllers
 {
@@ -16,17 +17,19 @@ namespace Indus.Store.Services.Controllers
     public class ProductsController  : Controller
     {
         private IProductsRepository _productRepo;
+        private MapperConfiguration _config;
         public ProductsController(IProductsRepository Repo)
         {
             _productRepo = Repo;
+            _config = new AutoMapperConfig().Configure();
+
         }
         // GET api/products
         [HttpGet]
         public IActionResult GetAllProducts()
         {
             var allProducts = _productRepo.GetAll().ToList();
-            var config = new AutoMapperConfig().Configure();
-            var iMapper = config.CreateMapper();
+            var iMapper = _config.CreateMapper();
             var allProductsDTO = iMapper.Map<ICollection<Product>, ICollection<ProductDTO>>(allProducts);
             return Ok(allProductsDTO);
         }
@@ -40,9 +43,22 @@ namespace Indus.Store.Services.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult AddProduct([FromBody] dynamic data)
         {
+            var config = new AutoMapperConfig().Configure();
+            var iMapper = _config.CreateMapper();
+            var product = JsonConvert.DeserializeObject(data);
+            //ProductDTO product = (ProductDTO)JsonConvert.DeserializeObject(data);
+            Product productToAdd = new Product {product_name=product["product_name"],product_description=product["product_description"], product_price=product["product_price"] };
+            _productRepo.Add(productToAdd);
+            bool result = _productRepo.Save();
+            if (!result)
+            {
+                return new StatusCodeResult(500);
+            }
+            return Ok(iMapper.Map<ProductDTO>(productToAdd));
         }
+
 
         // PUT api/values/5
         [HttpPut("{id}")]

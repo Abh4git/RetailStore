@@ -16,10 +16,13 @@ namespace Indus.Store.WebApp
     public class HomeController : Controller
     {
         private readonly IOptions<MySettingsModel> appSettings;
+        private ProductService _productService;
 
         public HomeController(IOptions<MySettingsModel> app)
         {
             appSettings = app;
+            _productService = new ProductService();
+
             //ApplicationSettings.WebApiUrl = appSettings.Value.WebApiBaseUrl;
         }
 
@@ -38,15 +41,44 @@ namespace Indus.Store.WebApp
             ViewData["MyProduct"] = test;
             return View(test);*/
 
-            ProductService productService = new ProductService();
             
-            ViewData["MyProduct"] = productService.GetProducts();
-            List<Product> productsList = productService.GetProducts();
+            //ViewData["MyProduct"] = _productService.GetProducts();
+            List<Product> productsList = _productService.GetProducts();
             return View(productsList);
 
         }
 
+        [HttpGet]
+        public IActionResult AddProduct()
+        {
+            /*Product test = new Product() { product_id =1, product_name="Test"};
+            ViewData["MyProduct"] = test;
+            return View(test);*/
+            return View();
 
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        [Route("Home/AddProduct")]
+        public JsonResult AddProduct([FromBody] Product product)
+        {
+            //Product test = new  Product() { product_id =1, product_name="Test"};
+            //ViewData["MyProduct"] = test;
+            //return View(test);*/
+            //return Ok();
+            Product productAdded = _productService.AddProduct(product);
+            return Json(productAdded);
+
+        }
+        [HttpPost]
+        public IActionResult Post(Product model)
+        {
+            /*Product test = new Product() { product_id =1, product_name="Test"};
+            ViewData["MyProduct"] = test;
+            return View(test);*/
+            return Ok();
+
+        }
         /*private async Task<JsonResult> SaveUser()
         {
             var model = new UsersModel()

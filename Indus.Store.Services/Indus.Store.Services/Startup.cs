@@ -35,7 +35,7 @@ namespace Indus.Store.Services
             services.AddScoped<IProductsRepository,ProductsRepository>();
             services.AddCors(c =>
             {
-                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:55456"));
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:55457"));
             });
             services.AddMvc();
         }
@@ -48,7 +48,7 @@ namespace Indus.Store.Services
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(options => options.WithOrigins("http://localhost:55456"));
+            app.UseCors(options => options.WithOrigins("http://localhost:55457"));
             app.UseMvc();
         }
     }
