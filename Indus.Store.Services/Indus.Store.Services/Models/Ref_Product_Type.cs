@@ -27,16 +27,7 @@ namespace Indus.Store.Models
 
 		}
 
-		public  int parent_product_type_code{
-			get;
-			set;
-		}
-
-		public  int product_id{
-			get;
-			set;
-		}
-
+	
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column(Order = 0)]
          public  int product_type_code{

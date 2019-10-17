@@ -43,7 +43,13 @@ namespace Indus.Store.WebApp
 
             app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("addproduct", "{controller=Home}/{action=products/add}");
+                //routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
+            //app.UseMvc();
         }
     }
 }
