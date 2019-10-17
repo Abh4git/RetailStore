@@ -12281,11 +12281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Abhilash\\Projects-OpenSource\\RetailStore\\Indus.Store.Services\\Indus.Store.WebApp\\Indus.Store.WebApp.csproj",
+      "projectUniqueName": "D:\\Abhilash\\GitHub-Abh4git\\RetailStore\\Indus.Store.Services\\Indus.Store.WebApp\\Indus.Store.WebApp.csproj",
       "projectName": "Indus.Store.WebApp",
-      "projectPath": "D:\\Abhilash\\Projects-OpenSource\\RetailStore\\Indus.Store.Services\\Indus.Store.WebApp\\Indus.Store.WebApp.csproj",
+      "projectPath": "D:\\Abhilash\\GitHub-Abh4git\\RetailStore\\Indus.Store.Services\\Indus.Store.WebApp\\Indus.Store.WebApp.csproj",
       "packagesPath": "C:\\Users\\ABHILASH\\.nuget\\packages\\",
-      "outputPath": "D:\\Abhilash\\Projects-OpenSource\\RetailStore\\Indus.Store.Services\\Indus.Store.WebApp\\obj\\",
+      "outputPath": "D:\\Abhilash\\GitHub-Abh4git\\RetailStore\\Indus.Store.Services\\Indus.Store.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@Html.AntiForgeryToken()
+@model Indus.Store.WebApp.Models.Product
+@using Indus.Store.WebApp.Models;
+@{
+    ViewBag.Title = "Add Products";
+}
+<link href="@Url.Content("~/css/w3.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/css/rly.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script type="text/javascript" src="@Url.Content("~/js/jquery-3.2.1.min.js")"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#save_product').click(function () {
+            var obj = new Object();
+            //obj. = "product";
+            obj.product_type_code = '1';
+            obj.product_name = $('#name').val(); ;
+            obj.product_description = $('#desc').val(); ;
+            obj.product_price = $('#price').val(); ;
+            var jsonObj = JSON.stringify(obj);
+            var finalJson = '{"product":' + jsonObj +  '}';
+            //var jsonObj = '{"product": {product_name:"Test", product_description="DescTest", product_price="200"}}';
+            var urlToPost = '/Home/AddProduct';
+            var form = $('#__AjaxAntiForgeryForm');
+            var token = $('input[name="__RequestVerificationToken"]', form).val();
+
+            if (jsonObj == null) {
+                alert("Something wrong");
+
+            }
+            alert(jsonObj);
+            $.ajax({
+                type: 'POST',
+                url: urlToPost,
+                headers: { "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val() },
+                data: jsonObj,
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (msg) {
+                    //do something
+                    alert('Success');
+                },
+                error: function (errormessage) {
+                    //do something else
+                    alert('Fail');
+                }
+            });
+        });
+
+    });
+</script>
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <span class="w3-bar-item w3-left">Add Product</span>
+    <span class="w3-bar-item w3-right">Retail Store</span>
+</div>
+<br />
+<br />
+<div class="row">
+
+
+    <div class="col-md-3">
+
+        <h3>Add Product</h3>
+
+        <i class="fa fa-book"></i>
+        <ul class="product-props">
+            <li>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input name="name" id="name" type="text" /></li>
+            <li>Description: <input name="desc " id="desc" type="text" /></li>
+            <li>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :<input name="price" id="price" type="text" /></li>
+        </ul>
+        <input type="button" name="save_product" value="Save" id="save_product" class="btn btn-success" />
+    </div>
+
+
+</div>
