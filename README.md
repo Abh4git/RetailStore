@@ -10,10 +10,12 @@ Micro RetailStore Sample Application using .NET Core and Web API with WebApplica
 ![Step2](https://github.com/Abh4git/RetailStore/blob/develop/Step2.PNG)
 ![Step3](https://github.com/Abh4git/RetailStore/blob/develop/Step3.PNG)
 Iteratively building the solution in 2 week sprints
+# Architecture
+![Architecture Overview](https://github.com/Abh4git/RetailStore/blob/master/2019-10RetailStore_Architecture_Overview.pdf)
 # Current State
 1. Database and Entity Framework in place for the micro Retail Store
 2. WebAPI - Products Controller to obtain the list of Products ready [GET]
 3. WebAPI - Add a Product ready [POST]
 4. ASP.NET MVC - Products Listed in Store calling WebAPI (2) 
-5. ASP.NET MVC - AddProduct Page calling WebAPI POST (3) 
-![Architecture Overview](https://github.com/Abh4git/RetailStore/blob/master/2019-10RetailStore_Architecture_Overview.pdf)
+5. ASP.NET MVC - AddProduct Page calling WebAPI POST (3)
+
