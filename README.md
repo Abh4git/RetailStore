@@ -16,4 +16,4 @@ Iteratively building the solution in 2 week sprints
 3. WebAPI - Add a Product ready [POST]
 4. ASP.NET MVC - Products Listed in Store calling WebAPI (2) 
 5. ASP.NET MVC - AddProduct Page calling WebAPI POST (3) 
-
+![Architecture Overview](https://github.com/Abh4git/RetailStore/blob/master/2019-10RetailStore_Architecture_Overview.pdf)
